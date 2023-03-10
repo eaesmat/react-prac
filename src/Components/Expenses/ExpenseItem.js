@@ -3,6 +3,10 @@ import Card from '../UI/Card';
 import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
+
+  const clickHandler = () => {
+    console.log('clickHandler');
+  };
     return (
         <Card className='expense-item'>
             <div className=''>
@@ -15,6 +19,7 @@ const ExpenseItem = (props) => {
             <div className='expense-item__price'>
                 {props.amount}
             </div>
+            <button onClick={clickHandler}>Cick Me </button>
         </Card>
     );
 }
