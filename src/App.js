@@ -8,9 +8,17 @@ function App() {
     { id: "i3", name: "Pen", date: new Date(2023, 12, 12), amount: 600 },
     { id: "i4", name: "Book", date: new Date(2022, 5, 17), amount: 900 },
   ];
+
+  const getData = (data) => {
+    const newData = {
+      ...data,
+    }
+    console.log('App js');
+    console.log(newData);
+  }
   return (
     <div>
-      <NewExpense />
+      <NewExpense getData ={getData} />
       <Expenses items={items} />
     </div>
   );
